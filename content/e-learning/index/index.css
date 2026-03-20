@@ -1,0 +1,73 @@
+/* Container Utama */
+.elearning-container { display: flex; flex-direction: column; gap: 25px; }
+
+/* Banner Hero */
+.el-banner {
+    background: linear-gradient(135deg, #2b44b0, #1e3288);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 10px rgba(43, 68, 176, 0.2);
+}
+.el-banner-text h2 { font-size: 24px; margin-bottom: 8px; font-weight: 700; }
+.el-banner-text p { font-size: 14px; opacity: 0.9; }
+.el-banner-illustration { font-size: 60px; }
+
+/* Grid Dua Kolom (Kiri & Kanan) */
+.el-grid { display: grid; grid-template-columns: 2.2fr 1fr; gap: 25px; }
+.el-section-title { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+
+/* Kartu Mata Kuliah (Kolom Kiri) */
+.el-course-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+.el-card {
+    background: #fff; border-radius: 10px; padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03); border: 1px solid #f0f0f0;
+}
+.el-card-img {
+    height: 80px; border-radius: 8px; margin-bottom: 15px;
+    display: flex; justify-content: center; align-items: center; font-size: 35px;
+}
+.img-blue { background: #e8eff6; }
+.img-green { background: #eaf5ee; }
+.img-yellow { background: #fff5e6; }
+
+.el-card-title { font-size: 15px; font-weight: 700; color: #333; margin-bottom: 5px; }
+.el-card-subtitle { font-size: 12px; color: #888; margin-bottom: 15px; }
+
+/* Progress Bar */
+.el-progress { background: #eee; height: 6px; border-radius: 5px; margin-bottom: 10px; overflow: hidden; }
+.el-progress-bar { height: 100%; border-radius: 5px; }
+.bar-blue { background: #2b44b0; }
+.bar-green { background: #28a745; }
+.bar-yellow { background: #ffc107; }
+
+/* Statistik Bawah Card */
+.el-card-stats { display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: #777; }
+.stat-blue { color: #2b44b0; }
+.stat-green { color: #28a745; }
+.stat-yellow { color: #d39e00; }
+
+/* Daftar Deadline Tugas (Kolom Kanan) */
+.el-right-col { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border: 1px solid #f0f0f0; height: fit-content; }
+.el-task-list { display: flex; flex-direction: column; gap: 15px; }
+.el-task-item { display: flex; align-items: center; gap: 15px; padding-bottom: 15px; border-bottom: 1px dashed #eee; }
+.el-task-item:last-child { border-bottom: none; padding-bottom: 0; }
+.el-task-icon { width: 35px; height: 35px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 12px; background: #f9f9f9; }
+.el-task-info { flex: 1; }
+.el-task-info h4 { font-size: 13px; font-weight: 600; color: #333; margin-bottom: 3px; }
+.el-task-info p { font-size: 11px; color: #888; }
+.el-task-badge { font-size: 10px; font-weight: 700; padding: 4px 8px; border-radius: 12px; white-space: nowrap; }
+
+/* Warna Badge */
+.text-red { background: #fcebeb; color: #dc3545; }
+.text-yellow { background: #fff8e5; color: #d39e00; }
+.text-blue { background: #e8eff6; color: #2b44b0; }
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .el-grid { grid-template-columns: 1fr; } 
+    .el-banner { flex-direction: column; text-align: center; gap: 20px; }
+}
