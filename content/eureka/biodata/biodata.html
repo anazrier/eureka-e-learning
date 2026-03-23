@@ -1,0 +1,509 @@
+<div class="dashboard-header">
+    <h2>Biodata Mahasiswa</h2>
+    <p style="color: #888; font-size: 14px;">Kelola informasi data diri dan akademik kamu di sini.</p>
+</div>
+
+<div class="bio-tabs">
+    <button class="tab-btn active" onclick="switchTab('tab-data-diri', this)">Data Diri</button>
+    <button class="tab-btn" onclick="switchTab('tab-akademik', this)">Akademik</button>
+    <button class="tab-btn" onclick="switchTab('tab-alamat', this)">Alamat</button>
+    <button class="tab-btn" onclick="switchTab('tab-ortu', this)">Orang Tua</button>
+    <button class="tab-btn" onclick="switchTab('tab-wali', this)">Wali</button>
+    <button class="tab-btn" onclick="switchTab('tab-pendidikan', this)">Riwayat Pendidikan</button>
+</div>
+
+<div class="bio-container">
+    
+    <div class="bio-profile-card">
+        <div class="profile-img-bg">
+            <img src="https://ui-avatars.com/api/?name=Lorem+Ipsum&background=0D8ABC&color=fff&size=150" alt="Profile" class="profile-img">
+        </div>
+        
+        <button class="btn-outline"><i class="fas fa-camera"></i> Ganti Foto Profil</button>
+        <p class="file-hint">Maks. 1 MB (JPEG/JPG/PNG)</p>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">mahasiswa@unibi.ac.id <i class="fas fa-edit"></i></span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">No. HP</span>
+                <span class="contact-value">081234567890 <i class="fas fa-edit"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bio-form-card">
+        
+        <!-- data diri -->
+        <div id="tab-data-diri" class="tab-content active-tab">
+            <h3 class="form-section-title">Informasi Pribadi</h3>
+            <form class="bio-form">
+                <div class="form-group full-width">
+                    <label>Nama Lengkap <span class="required">*</span></label>
+                    <input type="text" value="LOREM IPSUM DOLOR" class="form-control text-read-only" readonly>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>NIK <span class="required">*</span></label>
+                        <input type="text" value="3277026907060001" class="form-control">
+                        <span class="input-hint">Tanpa tanda baca</span>
+                    </div>
+                    <div class="form-group">
+                        <label>NPWP</label>
+                        <input type="text" placeholder="Masukkan NPWP jika ada" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tempat Lahir <span class="required">*</span></label>
+                        <input type="text" value="Bandung" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Lahir <span class="required">*</span></label>
+                        <input type="date" value="2005-01-01" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Agama <span class="required">*</span></label>
+                        <select class="form-control">
+                            <option selected>Islam</option>
+                            <option>Kristen</option>
+                            <option>Katolik</option>
+                            <option>Hindu</option>
+                            <option>Buddha</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Kewarganegaraan <span class="required">*</span></label>
+                        <select class="form-control">
+                            <option selected>ID - Indonesia</option>
+                            <option>WNA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Golongan Darah</label>
+                        <select class="form-control">
+                            <option selected>O</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>AB</option>
+                        </select>
+                    </div>
+                    <div class="form-group flex-group">
+                        <div style="flex: 1;">
+                            <label>Berat Badan</label>
+                            <div class="input-with-suffix">
+                                <input type="number" value="48" class="form-control">
+                                <span class="suffix">kg</span>
+                            </div>
+                        </div>
+                        <div style="flex: 1;">
+                            <label>Tinggi Badan</label>
+                            <div class="input-with-suffix">
+                                <input type="number" value="156" class="form-control">
+                                <span class="suffix">cm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-primary">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+        
+    
+        <!-- akademik -->
+        <div id="tab-akademik" class="tab-content">
+            <h3 class="form-section-title">Status Akademik Utama</h3>
+            <form class="bio-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Status Mahasiswa</label>
+                        <div class="status-badge active-badge">AKTIF</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Program Studi</label>
+                        <input type="text" value="Informatika" class="form-control text-read-only" readonly>
+                    </div>
+                </div>
+
+                <h3 class="form-section-title" style="margin-top: 20px;">Detail Mahasiswa</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>NPM (Nomor Pokok Mahasiswa)</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="text" value="1202220001" class="form-control text-read-only" style="flex: 1;" readonly>
+                            <button type="button" class="btn-outline" style="margin-top: 0; padding: 0 15px; display: flex; align-items: center; gap: 8px;">
+                                <i class="fas fa-download"></i> Download KTM
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tahun Masuk</label>
+                        <input type="text" value="2025" class="form-control text-read-only" readonly>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Jenis Kelas</label>
+                        <input type="text" value="Reguler" class="form-control text-read-only" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Dosen Wali</label>
+                        <input type="text" value="Venia Restreva D., S.Si.Kom., M.Si., M.Sc." class="form-control text-read-only" readonly>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- alamat -->
+        <div id="tab-alamat" class="tab-content">
+            <h3 class="form-section-title">Alamat Domisili</h3>
+            <form class="bio-form">
+                <div class="form-group full-width">
+                    <label>Alamat Lengkap (Jalan, Komplek, No Rumah)</label>
+                    <textarea class="form-control" rows="3">Jl. Contoh Alamat No. 123</textarea>
+                </div>
+                
+                <div class="form-row" style="grid-template-columns: 1fr 1fr 2fr;">
+                    <div class="form-group">
+                        <label>RT</label>
+                        <input type="text" value="001" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>RW</label>
+                        <input type="text" value="002" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Kode Pos</label>
+                        <input type="text" value="40285" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Kelurahan / Desa</label>
+                        <input type="text" value="Cijagra" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Kecamatan</label>
+                        <input type="text" value="Lengkong" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Kota / Kabupaten</label>
+                        <input type="text" value="Kota Bandung" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Provinsi</label>
+                        <input type="text" value="Jawa Barat" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-primary">Simpan Alamat</button>
+                </div>
+            </form>
+        </div>
+
+        
+        <!-- ortu -->
+        <div id="tab-ortu" class="tab-content">
+            <h3 class="form-section-title">Data Ayah</h3>
+            <form class="bio-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Ayah</label>
+                        <input type="text" placeholder="Masukkan nama ayah" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>NIK <span class="required">*</span></label>
+                        <input type="text" value="327700000000000" class="form-control">
+                        <span class="input-hint">Tanpa tanda baca</span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Pendidikan Terakhir</label>
+                        <select class="form-control">
+                            <option selected>SMA/SMK/SLTA/Sederajat</option>
+                            <option>SD</option>
+                            <option>SMP</option>
+                            <option>Sarjana</option>
+                            <option>Magister</option>
+                            <option>Doktor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Pekerjaan Ayah</label>
+                        <input type="text" placeholder="Contoh: Wiraswasta, PNS, dll." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Penghasilan per Bulan</label>
+                        <select class="form-control">
+                            <option selected>Pilih rentang penghasilan</option>
+                            <option>&lt; Rp 1.000.000</option>
+                            <option>Rp 1.000.000 - Rp 3.000.000</option>
+                            <option>Rp 3.000.000 - Rp 5.000.000</option>
+                            <option>&gt; Rp 5.000.000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>No. Telepon / HP</label>
+                        <input type="text" placeholder="Masukkan nomor aktif" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email (Opsional)</label>
+                        <input type="email" placeholder="contoh@email.com" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Alamat Lengkap</label>
+                    <textarea class="form-control" rows="2" placeholder="Jalan, Komplek, RT/RW, Desa, Kecamatan"></textarea>
+                    <div style="margin-top: 6px; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="alamat-ayah-sama">
+                        <label for="alamat-ayah-sama" style="font-weight: normal; cursor: pointer; color: #888;">Sama dengan alamat domisili mahasiswa</label>
+                    </div>
+                </div>
+
+
+                <h3 class="form-section-title" style="margin-top: 40px;">Data Ibu</h3>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Ibu Kandung <span class="required">*</span></label>
+                        <input type="text" placeholder="Masukkan nama ibu kandung" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Pekerjaan Ibu</label>
+                        <input type="text" placeholder="Contoh: Ibu Rumah Tangga" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Penghasilan per Bulan</label>
+                        <select class="form-control">
+                            <option selected>Tidak berpenghasilan</option>
+                            <option>&lt; Rp 1.000.000</option>
+                            <option>Rp 1.000.000 - Rp 3.000.000</option>
+                            <option>Rp 3.000.000 - Rp 5.000.000</option>
+                            <option>&gt; Rp 5.000.000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>No. Telepon / HP</label>
+                        <input type="text" placeholder="Masukkan nomor aktif" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email (Opsional)</label>
+                        <input type="email" placeholder="contoh@email.com" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Alamat Lengkap</label>
+                    <textarea class="form-control" rows="2" placeholder="Jalan, Komplek, RT/RW, Desa, Kecamatan"></textarea>
+                    <div style="margin-top: 6px; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="alamat-ibu-sama" checked>
+                        <label for="alamat-ibu-sama" style="font-weight: normal; cursor: pointer; color: #888;">Sama dengan alamat domisili ayah</label>
+                    </div>
+                </div>
+
+                <div class="form-actions" style="margin-top: 15px;">
+                    <button type="button" class="btn-primary">Simpan Data Orang Tua</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- wali -->
+
+        <div id="tab-wali" class="tab-content">
+            <h3 class="form-section-title">Data Wali Mahasiswa</h3>
+            <p style="font-size: 13px; color: #888; margin-top: -15px; margin-bottom: 20px;">*Diisi jika mahasiswa tidak tinggal bersama orang tua.</p>
+            <form class="bio-form">
+                 <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Wali</label>
+                        <input type="text" placeholder="Masukkan nama wali" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>NIK <span class="required">*</span></label>
+                        <input type="text" value="327700000000000" class="form-control">
+                        <span class="input-hint">Tanpa tanda baca</span>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tanggal Lahir</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Pendidikan Terakhir</label>
+                        <select class="form-control">
+                            <option selected>SMA/SMK/SLTA/Sederajat</option>
+                            <option>SD</option>
+                            <option>SMP</option>
+                            <option>Sarjana</option>
+                            <option>Magister</option>
+                            <option>Doktor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Pekerjaan Ayah</label>
+                        <input type="text" placeholder="Contoh: Wiraswasta, PNS, dll." class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Penghasilan per Bulan</label>
+                        <select class="form-control">
+                            <option selected>Pilih rentang penghasilan</option>
+                            <option>&lt; Rp 1.000.000</option>
+                            <option>Rp 1.000.000 - Rp 3.000.000</option>
+                            <option>Rp 3.000.000 - Rp 5.000.000</option>
+                            <option>&gt; Rp 5.000.000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>No. Telepon / HP</label>
+                        <input type="text" placeholder="Masukkan nomor aktif" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Email (Opsional)</label>
+                        <input type="email" placeholder="contoh@email.com" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Alamat Lengkap</label>
+                    <textarea class="form-control" rows="2" placeholder="Jalan, Komplek, RT/RW, Desa, Kecamatan"></textarea>
+                    <div style="margin-top: 6px; display: flex; align-items: center; gap: 6px; cursor: pointer;">
+                        <input type="checkbox" id="alamat-ayah-sama">
+                        <label for="alamat-ayah-sama" style="font-weight: normal; cursor: pointer; color: #888;">Sama dengan alamat domisili mahasiswa</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- riwayat pendidikan -->
+
+        <div id="tab-pendidikan" class="tab-content">
+            <h3 class="form-section-title">Pendidikan Terakhir</h3>
+            <form class="bio-form">
+                <div class="form-group full-width">
+                    <label>Asal Sekolah (SMA/SMK/Sederajat)</label>
+                    <input type="text" placeholder="Contoh: SMAN 1 Bandung" class="form-control">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tahun Lulus</label>
+                        <input type="number" placeholder="Contoh: 2024" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Jurusan Saat Sekolah</label>
+                        <input type="text" placeholder="Contoh: IPA / Rekayasa Perangkat Lunak" class="form-control">
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; margin-bottom: 15px;">
+                    <h3 class="form-section-title" style="margin: 0; padding: 0; border: none;">Sertifikasi / Kompetensi Tambahan</h3>
+                    <button type="button" class="btn-outline" style="margin: 0; padding: 8px 15px; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+                        <i class="fas fa-plus"></i> Tambah Sertifikat
+                    </button>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;">No</th>
+                                <th style="width: 35%;">Nama Sertifikasi</th>
+                                <th style="width: 25%;">Lembaga Penerbit</th>
+                                <th style="width: 15%;">Tahun</th>
+                                <th style="width: 10%; text-align: center;">Berkas</th>
+                                <th style="width: 10%; text-align: center;">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td style="font-weight: 600;">Sertifikasi LSP (Garuda Emas)</td>
+                                <td>BNSP</td>
+                                <td>2024</td>
+                                <td style="text-align: center;">
+                                    <a href="#" style="color: #4a9bdc; text-decoration: none; font-size: 18px;" title="Lihat PDF">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </a>
+                                </td>
+                                <td style="text-align: center;">
+                                    <button type="button" class="action-btn edit-btn" title="Edit Data"><i class="fas fa-edit"></i></button>
+                                    <button type="button" class="action-btn delete-btn" title="Hapus Data"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="form-actions" style="margin-top: 30px;">
+                    <button type="button" class="btn-primary">Simpan Riwayat</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    function switchTab(tabId, btnElement) {
+        // Hapus class 'active' dari semua tombol tab
+        let buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Hapus class 'active-tab' dari semua isi konten
+        let contents = document.querySelectorAll('.tab-content');
+        contents.forEach(content => content.classList.remove('active-tab'));
+        
+        // Tambahkan class 'active' ke tombol yang diklik dan konten yang sesuai
+        btnElement.classList.add('active');
+        document.getElementById(tabId).classList.add('active-tab');
+    }
+</script>

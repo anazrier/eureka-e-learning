@@ -1,0 +1,379 @@
+/* Layout Tab Modern */
+.bio-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #777;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.tab-btn:hover {
+    color: #0056b3;
+    background: #f8f9fc;
+}
+
+.tab-btn.active {
+    color: #0056b3;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #0056b3;
+    border-radius: 3px 3px 0 0;
+}
+
+/* Grid Utama: Kiri (Profile), Kanan (Form) */
+.bio-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* --- Kiri: Kartu Profil --- */
+.bio-profile-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-img-bg {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(135deg, #0056b3, #4a9bdc);
+    border-radius: 8px;
+    margin-bottom: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    position: absolute;
+    bottom: -40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-outline {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0056b3;
+    background: transparent;
+    border: 1px solid #0056b3;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-outline:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+.file-hint {
+    font-size: 11px;
+    color: #888;
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.contact-info {
+    width: 100%;
+    border-top: 1px dashed #eee;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contact-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+}
+
+.contact-value {
+    font-size: 14px;
+    color: #0056b3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- Kanan: Kartu Form --- */
+.bio-form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+}
+
+.form-section-title {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Styling Inputan */
+.bio-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+}
+
+.required {
+    color: #e74a3b;
+}
+
+.input-hint {
+    font-size: 11px;
+    color: #e74a3b;
+    margin-top: 2px;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border: 1px solid #dcdfe6;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    transition: all 0.2s;
+    outline: none;
+    background: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.form-control:focus {
+    border-color: #4a9bdc;
+    box-shadow: 0 0 0 3px rgba(74, 155, 220, 0.1);
+}
+
+/* Input dengan Suffix (kg / cm) */
+.flex-group {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.input-with-suffix {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-suffix .form-control {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.suffix {
+    position: absolute;
+    right: 15px;
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+}
+
+/* Tombol Simpan */
+.form-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #0056b3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 86, 179, 0.2);
+}
+
+.btn-primary:hover {
+    background: #004494;
+    transform: translateY(-1px);
+}
+
+/* Responsive Mobile */
+@media (max-width: 992px) {
+    .bio-container {
+        grid-template-columns: 1fr;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .bio-profile-card {
+        padding: 30px;
+    }
+}
+
+/* --- Tambahan untuk Fitur Tab & Akademik --- */
+.tab-content {
+    display: none; /* Sembunyikan semua tab secara default */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-content.active-tab {
+    display: block; /* Tampilkan tab yang sedang aktif */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Style khusus inputan Readonly (Akademik) */
+.text-read-only {
+    background-color: #f8f9fc;
+    border-color: #e3e6f0;
+    color: #5a5c69;
+    cursor: default;
+}
+
+/* Style Badge Status AKTIF */
+.status-badge {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    display: inline-block;
+    width: fit-content;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.active-badge {
+    background-color: #eaf5ee;
+    color: #28a745;
+    border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+/* --- Styling Modern Table untuk Sertifikasi --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #e3e6f0;
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.modern-table thead {
+    background-color: #f8f9fc;
+    border-bottom: 2px solid #e3e6f0;
+}
+
+.modern-table th {
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 12px;
+    color: #555;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.modern-table td {
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.modern-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+/* Styling Tombol Aksi di Tabel (Edit & Hapus) */
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: 0.2s;
+    font-size: 14px;
+}
+.edit-btn { color: #f6c23e; } /* Kuning Warning */
+.edit-btn:hover { background: #fdf5df; }
+.delete-btn { color: #e74a3b; } /* Merah Danger */
+.delete-btn:hover { background: #fceceb; }
