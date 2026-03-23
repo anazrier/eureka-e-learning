@@ -29,18 +29,22 @@
     background-color: var(--clean-white);
 }
 
-.menu-btn { 
-    background: none; 
-    border: none; 
-    font-size: 24px; 
-    cursor: pointer; 
-    display: none; 
-    color: var(--deep-ink); /* Menyesuaikan dengan teks gelap kita */
-    transition: color 0.3s ease;
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    color: var(--deep-ink);
+    /*Menyesuaikandenganteksgelapkita*/transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
 }
 
 .menu-btn:hover {
-    color: var(--edu-navy);
+    color: var(--edu-orange);
 }
 
 .nav-right { 
@@ -76,7 +80,7 @@
     align-items: center; 
     font-weight: 700;
     font-size: 1.1rem;
-    box-shadow: 0 2px 5px rgba(21, 76, 121); /* Bayangan tosca yang halus */
+    box-shadow: 0 4px 10px rgba(21, 76, 121, 0.2); /* Bayangan tosca yang halus */
 }
 
 .user-info { 
@@ -108,7 +112,11 @@
 /* Efek saat profil di-hover, ikon panah berubah warna dan turun */
 .user-profile:hover .dropdown-icon {
     transform: translateY(3px);
-    color: var(--edu-navy);
+    color: var(--edu-orange);
+}
+
+.notification-icon:hover {
+    color: var(--edu-navy) !important;
 }
 
 /* Responsiveness untuk Layar HP */

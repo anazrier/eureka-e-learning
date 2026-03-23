@@ -1,16 +1,22 @@
 <div class="navbar-content">
     <div class="nav-left">
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <button id="menu-toggle" class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
+    
     <div class="nav-right">
-        <span class="icon">🔔</span>
+        <div class="notification-icon" style="cursor: pointer; color: var(--slate-gray); font-size: 1.2rem; margin-right: 15px; transition: color 0.3s;">
+            <i class="fas fa-bell"></i>
+        </div>
+        
         <div class="user-profile">
-            <div class="avatar">U</div>
+            <div class="avatar">S</div>
             <div class="user-info">
-                <span class="name">Lorem User</span>
-                <span class="role">Ipsum Dolor</span>
+                <span class="name">Sendy Ramadhan</span>
+                <span class="role">Informatics - UNIBI</span>
             </div>
-            <span class="dropdown-icon">▼</span>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
         </div>
     </div>
 </div>

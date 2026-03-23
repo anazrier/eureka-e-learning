@@ -122,3 +122,126 @@
 .sidebar-header + .menu-label {
     margin-top: 0;
 }
+
+/* ======================================================== */
+/* FITUR COLLAPSE SIDEBAR (Mode Layar Lebar / Desktop)      */
+/* ======================================================== */
+
+/* 1. Mengubah lebar container sidebar saat dilipat */
+.sidebar-container {
+    transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), left 0.5s ease; 
+    overflow: hidden;
+}
+
+.sidebar-container.collapsed {
+    width: 80px; /* Menyempit jadi 80px saja */
+}
+
+.sidebar-menu li a span,
+.sidebar-header h4 {
+    white-space: nowrap; 
+    overflow: hidden;
+    /* Lebar fisik dan transparansi dikecilkan bersamaan secara perlahan */
+    transition: max-width 0.4s ease, opacity 0.3s ease, margin-left 0.4s ease;
+    max-width: 200px; /* Angka aman melebihi panjang teks */
+    opacity: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sidebar-container.collapsed .sidebar-menu li a span,
+.sidebar-container.collapsed .sidebar-header h4 {
+    max-width: 0;
+    opacity: 0;
+    margin-left: 0; /* Menarik teks agar tidak meninggalkan spasi kosong */
+}
+
+.menu-label {
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.4s ease, padding 0.4s ease;
+    max-height: 50px;
+    opacity: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-container.collapsed .menu-label {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.sidebar-menu li a {
+    transition: padding 0.4s ease, justify-content 0.4s;
+}
+
+.sidebar-header h4,
+.menu-label,
+.sidebar-menu li a span {
+    transition: opacity 0.25s ease, visibility 0.25s;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 2. Menyembunyikan Teks Logo, Label, dan Teks Menu */
+.sidebar-container.collapsed .sidebar-header h4,
+.sidebar-container.collapsed .menu-label,
+.sidebar-container.collapsed .sidebar-menu li a span {
+    display: none; 
+}
+
+.sidebar-header {
+    transition: padding 0.4s ease;
+}
+
+/* 3. Menengahkan Bulatan Logo */
+.sidebar-container.collapsed .sidebar-header {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+}
+
+/* 4. Menengahkan Ikon Menu & Memperbesar sedikit */
+.sidebar-container.collapsed .sidebar-menu li a {
+    padding: 12px 0;
+    justify-content: center;
+}
+
+.sidebar-menu li a i {
+    min-width: 25px; 
+    text-align: center;
+    transition: font-size 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar-container.collapsed .sidebar-menu li a i {
+    font-size: 1.3rem;
+}
+
+/* 5. Mengatur agar area kanan (konten) melebar saat sidebar mengecil */
+.main-wrapper {
+    transition: width 0.3s ease;
+}
+
+/* ======================================================== */
+/* RESPONSIVE MOBILE (Layar HP)                             */
+/* ======================================================== */
+@media (max-width: 768px) {
+    .sidebar-container { 
+        position: fixed; 
+        height: 100vh; 
+        left: -250px; /* Sembunyi ke kiri luar layar */
+        width: 250px !important; /* Di HP lebarnya tetap utuh, tidak ada mode collapse icon */
+        box-shadow: 5px 0 15px rgba(0,0,0,0.05); 
+    }
+    
+    /* Saat tombol menu diklik di HP, sidebar meluncur masuk */
+    .sidebar-container.active { 
+        left: 0; 
+    }
+    
+    .main-wrapper { 
+        width: 100% !important; 
+    }
+}
