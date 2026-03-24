@@ -1,105 +1,74 @@
-:root {
-    /* Latar Belakang */
-    --soft-cloud: #F9FAFB;       
-    --clean-white: #FFFFFF;      
-    
-    /* Warna Brand & Aksen */
-    --edu-navy: #154C79;         /* Biru Gelap Edutrack (Utama) */
-    --edu-navy-hover: #103A5C;   /* Biru Gelap untuk efek Hover */
-    --edu-orange: #F38118;       /* Oranye Edutrack (Aksen/Tombol) */
-    --edu-orange-hover: #D66D0F;
-    
-    /* Warna Teks (Tipografi) */
-    --deep-ink: #111827;         
-    --slate-gray: #64748B;       
-    
-    /* Status & Indikator */
-    --emerald-green: #10B981;    
-    --vivid-rose: #F43F5E;       
-}
-
-.navbar-content { 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    height: 100%; 
-    padding: 0 25px; 
-    /* Opsional: Tambahkan garis bawah samar jika navbar menyatu dengan latar putih */
-    border-bottom: 1px solid #E2E8F0;
-    background-color: var(--clean-white);
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 25px;
 }
 
 .menu-btn {
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 24px;
     cursor: pointer;
-    display: block;
-    color: var(--deep-ink);
-    /*Menyesuaikandenganteksgelapkita*/transition: color 0.3s ease;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -ms-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
+    display: none;
+    color: #333;
 }
 
-.menu-btn:hover {
-    color: var(--edu-orange);
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.nav-right { 
-    display: flex; 
-    align-items: center; 
-    gap: 20px; 
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
 
-.user-profile { 
-    display: flex; 
-    align-items: center; 
-    gap: 12px; /* Sedikit dilebarkan agar tidak terlalu berdempetan */
-    cursor: pointer; 
-    padding: 5px 10px;
-    border-radius: 8px;
-    transition: background-color 0.2s ease;
+.avatar {
+    width: 35px;
+    height: 35px;
+    background: #e74a3b;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
 }
 
-/* Efek saat area profil disorot mouse */
-.user-profile:hover {
-    background-color: var(--soft-cloud);
+.user-info {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Lingkaran Avatar / Foto Profil */
-.avatar { 
-    width: 40px; /* Sedikit diperbesar dari 35px agar lebih proporsional */
-    height: 40px; 
-    background-color: var(--edu-navy); /* Mengubah merah lama menjadi Tosca UNIBI */
-    color: var(--clean-white); 
-    border-radius: 50%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+.user-info .name {
     font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 4px 10px rgba(21, 76, 121, 0.2); /* Bayangan tosca yang halus */
+    font-size: 14px;
+    color: #333;
 }
 
-.user-info { 
-    display: flex; 
-    flex-direction: column; 
+.user-info .role {
+    font-size: 11px;
+    color: #888;
 }
 
-.user-info .name { 
-    font-weight: 700; 
-    font-size: 14px; 
-    color: var(--deep-ink); /* Teks utama gelap */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    .user-info {
+        display: none;
+    }
+    /* Sembunyikan teks nama di HP biar rapi */
 }
 
-.user-info .role { 
-    font-size: 12px; 
-    color: var(--slate-gray); /* Teks sekunder abu-abu */
-}
 
-/* Ikon Dropdown (Panah ke bawah) */
+/* Tambahkan ini di bagian bawah */
+
 .dropdown-icon {
     font-size: 12px;
     color: var(--slate-gray);
@@ -109,7 +78,9 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Efek saat profil di-hover, ikon panah berubah warna dan turun */
+
+/* Opsional: Efek saat profil di-hover, segitiganya sedikit turun */
+
 .user-profile:hover .dropdown-icon {
     transform: translateY(3px);
     color: var(--edu-orange);
