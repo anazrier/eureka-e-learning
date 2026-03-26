@@ -34,15 +34,14 @@ body {
 /* --- Auth Left Section --- */
 
 #auth-left {
+    flex: 0 0 40%;
     background-color: var(--clean-white);
     height: 100vh;
-    padding: 4rem 5rem 0;
+    padding: 2rem 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.03);
-    position: relative;
-    z-index: 10;
+    box-sizing: border-box;
 }
 
 .auth-logo {
@@ -122,10 +121,12 @@ body {
 /* --- Auth Right Section --- */
 
 #auth-right {
-    background: linear-gradient(135deg, rgba(21, 76, 121, 0.8), rgba(17, 24, 39, 0.7)), url('assets/images/gedung-unibi.png') center/cover;
+    flex: 1;
+    background: linear-gradient(135deg, rgba(21, 76, 121, 0.4), rgba(17, 24, 39, 0.5)), url('assets/images/gedung-unibi.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
-    color: var(--clean-white);
-    position: relative;
 }
 
 #auth-right .hero-text h2 {
