@@ -149,12 +149,12 @@
     animation: fadeInDropdown 0.2s ease-out;
 }
 
-.dropdown-container:hover .dropdown-menu {
-    display: flex;
+.dropdown-menu.show {
+    display: flex !important;
     flex-direction: column;
 }
 
-.dropdown-container:hover .chevron-icon {
+.btn-primary.active .chevron-icon {
     transform: rotate(180deg);
 }
 
@@ -549,20 +549,24 @@
     }
 }
 
-.krs-info-card, 
+
+.krs-info-card,
 .student-info-row {
     overflow: visible !important;
 }
+
 
 .info-group.dropdown-container .dropdown-menu {
     z-index: 9999 !important;
 }
 
-.krs-grid, 
+
+.krs-grid,
 .accordion-grid {
     position: relative;
     z-index: 1;
 }
+
 
 .krs-action-bar {
     display: flex;
@@ -573,14 +577,11 @@
     border-radius: 12px;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-top: 24px;
-    
     position: sticky;
-    bottom: 20px; 
+    bottom: 20px;
     z-index: 100;
     border: 1px solid #eaedf2;
 }
-
-
 
 .action-info {
     display: flex;
@@ -599,7 +600,7 @@
 }
 
 .btn-simpan-krs {
-    background-color: #435ebe; 
+    background-color: #435ebe;
     color: #ffffff;
     border: none;
     padding: 12px 24px;
@@ -631,9 +632,9 @@
         padding: 15px;
         bottom: 10px;
     }
-    
-    .btn-simpan-krs {
-        width: 100%;
-        justify-content: center;
-    }
 }
+.btn-simpan-krs {
+    width: 100%;
+    justify-content: center;
+}
+
