@@ -98,7 +98,6 @@ function updateGlobalProgress() {
     const doneMateri = document.querySelectorAll('.floating-done.is-done').length;
     const doneTugas = document.querySelectorAll('.task-btn.submitted').length;
 
-    // Kalkulasi bobot: Base 40% + Materi (10% ea) + Tugas (20% ea)
     let newWidth = 40 + (doneMateri * 10) + (doneTugas * 20);
     if (newWidth > 100) newWidth = 100;
 
