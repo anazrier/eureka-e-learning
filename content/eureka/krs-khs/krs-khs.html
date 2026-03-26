@@ -33,15 +33,16 @@
                 <strong class="info-value text-green">4.00 (Dengan Pujian)</strong>
             </div>
             
-            <div class="info-group dropdown-container">
-                <button class="btn-primary btn-sm-download">
-                    <i class="fas fa-download"></i> Unduh Transkrip <i class="fas fa-chevron-down chevron-icon"></i>
-                </button>
-                <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item">Semua Semester</a>
-                    <a href="#" class="dropdown-item">Semester Pilihan</a>
-                </div>
-            </div>
+            <div class="info-group dropdown-container dropdown">
+    <button class="btn-primary btn-sm-download" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-download"></i> Unduh Transkrip <i class="fas fa-chevron-down chevron-icon"></i>
+    </button>
+    
+    <div class="dropdown-menu shadow">
+        <a href="#" class="dropdown-item">Semua Semester</a>
+        <a href="#" class="dropdown-item">Semester Pilihan</a>
+    </div>
+</div>
         </div>
     </div>
 
@@ -162,55 +163,50 @@
                             <td class="text-center">3</td>
                             <td class="text-center text-muted">-</td>
                         </tr>
+                        <tr>
+                            <td>IFKB2132</td>
+                            <td class="matkul-name">Pemrograman Dekstop</td>
+                            <td class="text-center">3</td>
+                            <td class="text-center text-muted">-</td>
+                        </tr>
+                        <tr>
+                            <td>UNKU0022</td>
+                            <td class="matkul-name">pancasila</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center text-muted">-</td>
+                        </tr>
+                        <tr>
+                            <td>UNKU0062</td>
+                            <td class="matkul-name">Entrepreneurship</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center text-muted">-</td>
+                        </tr>
+                        <tr>
+                            <td>UNKU0052</td>
+                            <td class="matkul-name">Bahasa Inggris</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center text-muted">-</td>
+                        </tr>
+                        <tr>
+                            <td>UNKU0042</td>
+                            <td class="matkul-name">Character Building</td>
+                            <td class="text-center">2</td>
+                            <td class="text-center text-muted">-</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-
     </div>
 </div>
 
 <div id="tab-rencana" class="krs-tab-content">
-    
-    <div id="tab-rencana" class="krs-tab-content">
-    
-    <div class="krs-plan-header">
-        <div class="krs-plan-title">
-            <h4>Kartu Rencana Studi (KRS)</h4>
-            <p>Pilih mata kuliah untuk Semester Genap 2025/2026</p>
-        </div>
-        <div class="krs-plan-action">
-            <span class="sks-counter">Total SKS Dipilih: <strong>20</strong> / 24</span>
-            <button class="btn-primary btn-save-krs"><i class="fas fa-save"></i> Simpan KRS</button>
-        </div>
-    </div>
-
-    <div class="accordion-grid">
-        
-        <div class="accordion-item">
-            <button class="accordion-btn" onclick="toggleAccordion(this)">
-                <div class="accordion-title">
-                    <h4>Semester 1</h4>
-                    <span class="badge-sks">Telah Lulus: 20 SKS</span>
-                </div>
-                <i class="fas fa-chevron-down accordion-icon"></i>
-            </button>
-            <div class="accordion-body">
-                <div class="table-responsive">
-                    <table class="krs-table">
-                        <tr>
-                            <td class="empty-course-msg">Mata kuliah telah diselesaikan.</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
+    <div class="accordion-container">
         <div class="accordion-item active">
             <button class="accordion-btn" onclick="toggleAccordion(this)">
                 <div class="accordion-title">
                     <h4>Semester 2</h4>
-                    <span class="badge-sks active-sks">Pilihan Saat Ini: 20 SKS</span>
+                    <span class="badge-sks active-sks">Pilihan Saat Ini: 23 SKS</span>
                 </div>
                 <i class="fas fa-chevron-down accordion-icon"></i>
             </button>
@@ -227,6 +223,17 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td>IFKB2292</td>
+                                <td class="matkul-name">Algoritma dan Pemrograman 2</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>IFKB2242</td>
                                 <td class="matkul-name">Pemrograman Web I</td>
                                 <td class="text-center">3</td>
@@ -239,8 +246,41 @@
                             </tr>
                             <tr>
                                 <td>IFKK2192</td>
-                                <td class="matkul-name">Arsitektur Komputer</td>
+                                <td class="matkul-name">Arsitektur dan Organisasi Komputer</td>
                                 <td class="text-center">3</td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKB2132</td>
+                                <td class="matkul-name">Pemrograman Desktop</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UNKU0022</td>
+                                <td class="matkul-name">Pancasila</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UNKU0062</td>
+                                <td class="matkul-name">Entrepreneurship</td>
+                                <td class="text-center">2</td>
                                 <td class="text-center">
                                     <label class="custom-checkbox">
                                         <input type="checkbox" checked>
@@ -259,39 +299,24 @@
                                     </label>
                                 </td>
                             </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <button class="accordion-btn" onclick="toggleAccordion(this)">
-                <div class="accordion-title">
-                    <h4>Semester 3</h4>
-                    <span class="badge-sks">Tersedia: 24 SKS</span>
-                </div>
-                <i class="fas fa-chevron-down accordion-icon"></i>
-            </button>
-            <div class="accordion-body">
-                <div class="table-responsive">
-                    <table class="krs-table">
-                        <thead>
                             <tr>
-                                <th class="col-kode">Kode</th>
-                                <th class="col-matkul">Mata Kuliah</th>
-                                <th class="col-sks text-center">SKS</th>
-                                <th class="col-pilih text-center">Pilih</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>IFKB3012</td>
-                                <td class="matkul-name">Backend Development</td>
-                                <td class="text-center">3</td>
+                                <td>UNKU0052</td>
+                                <td class="matkul-name">Bahasa Inggris</td>
+                                <td class="text-center">2</td>
                                 <td class="text-center">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>UNKU0042</td>
+                                <td class="matkul-name">Character Building</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" checked>
                                         <span class="checkmark"></span>
                                     </label>
                                 </td>
@@ -306,50 +331,7 @@
             <button class="accordion-btn" onclick="toggleAccordion(this)">
                 <div class="accordion-title">
                     <h4>Semester 4</h4>
-                    <span class="badge-sks">Terkunci</span>
-                </div>
-                <i class="fas fa-chevron-down accordion-icon"></i>
-            </button>
-            <div class="accordion-body">
-                <div class="table-responsive">
-                    <table class="krs-table">
-                        <tr>
-                            <td class="empty-course-msg">Selesaikan semester sebelumnya.</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-    <div class="accordion-container">
-        
-        <div class="accordion-item">
-            <button class="accordion-btn" onclick="toggleAccordion(this)">
-                <div class="accordion-title">
-                    <h4>Semester 1</h4>
-                    <span class="badge-sks">Telah Lulus: 20 SKS</span>
-                </div>
-                <i class="fas fa-chevron-down accordion-icon"></i>
-            </button>
-            <div class="accordion-body">
-                <div class="table-responsive">
-                    <table class="krs-table">
-                        <tr>
-                            <td class="empty-course-msg">Mata kuliah telah diselesaikan.</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <div class="accordion-item active">
-            <button class="accordion-btn" onclick="toggleAccordion(this)">
-                <div class="accordion-title">
-                    <h4>Semester 2</h4>
-                    <span class="badge-sks active-sks">Pilihan Saat Ini: 20 SKS</span>
+                    <span class="badge-sks">Tersedia: 27 SKS</span>
                 </div>
                 <i class="fas fa-chevron-down accordion-icon"></i>
             </button>
@@ -358,49 +340,121 @@
                     <table class="krs-table">
                         <thead>
                             <tr>
-                                <th class="col-pilih text-center">Pilih</th>
                                 <th class="col-kode">Kode</th>
                                 <th class="col-matkul">Mata Kuliah</th>
                                 <th class="col-sks text-center">SKS</th>
                                 <th class="col-kelas text-center">Kelas</th>
+                                <th class="col-pilih text-center">Pilih</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
+                                <td>IFKB4252</td>
+                                <td class="matkul-name">Grafika Komputer</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A0124</span></td>
                                 <td class="text-center">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
                                 </td>
-                                <td>IFKB2242</td>
-                                <td class="matkul-name">Pemrograman Web I</td>
-                                <td class="text-center">3</td>
-                                <td class="text-center"><span class="badge-kelas">A3000</span></td>
                             </tr>
                             <tr>
+                                <td>IFKK4152</td>
+                                <td class="matkul-name">Sistem Cerdas</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A5022</span></td>
                                 <td class="text-center">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
                                 </td>
-                                <td>IFKK2192</td>
-                                <td class="matkul-name">Arsitektur & Organisasi Komputer</td>
-                                <td class="text-center">3</td>
-                                <td class="text-center"><span class="badge-kelas">A3000</span></td>
                             </tr>
                             <tr>
+                                <td>IFKK4102</td>
+                                <td class="matkul-name">Rekayasa Desain dan Konstruksi Perangkat Lunak</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A0123</span></td>
                                 <td class="text-center">
                                     <label class="custom-checkbox">
-                                        <input type="checkbox" checked>
+                                        <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
                                 </td>
-                                <td>IFKK2022</td>
-                                <td class="matkul-name">Sistem Informasi</td>
+                            </tr>
+                            <tr>
+                                <td>IFKK4062</td>
+                                <td class="matkul-name">Sistem Terdistribusi</td>
                                 <td class="text-center">3</td>
-                                <td class="text-center"><span class="badge-kelas">A3001</span></td>
+                                <td class="text-center"><span class="badge-kelas">A0126</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK4042</td>
+                                <td class="matkul-name">Sistem Keamanan Komputer</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A0127</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK4052</td>
+                                <td class="matkul-name">Sistem Basis Data</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A5021</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKB4212</td>
+                                <td class="matkul-name">Analisis Multivariat</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A0125</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKB5302</td>
+                                <td class="matkul-name">Pemrograman Web II</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A0354</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKB5072</td>
+                                <td class="matkul-name">Pemrograman Mobile</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A1235</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -411,8 +465,8 @@
         <div class="accordion-item">
             <button class="accordion-btn" onclick="toggleAccordion(this)">
                 <div class="accordion-title">
-                    <h4>Semester 3</h4>
-                    <span class="badge-sks">Tersedia: 24 SKS</span>
+                    <h4>Semester 6</h4>
+                    <span class="badge-sks">Tersedia: 52 SKS</span>
                 </div>
                 <i class="fas fa-chevron-down accordion-icon"></i>
             </button>
@@ -421,37 +475,253 @@
                     <table class="krs-table">
                         <thead>
                             <tr>
-                                <th class="col-pilih text-center">Pilih</th>
                                 <th class="col-kode">Kode</th>
                                 <th class="col-matkul">Mata Kuliah</th>
                                 <th class="col-sks text-center">SKS</th>
                                 <th class="col-kelas text-center">Kelas</th>
+                                <th class="col-pilih text-center">Pilih</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-center">
-                                    <label class="custom-checkbox">
-                                        <input type="checkbox">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </td>
-                                <td>IFKK4102</td>
-                                <td class="matkul-name">Rekayasa Desain dan Konstruksi Perangkat Lunak</td>
+                                <td>IFPK6072</td>
+                                <td class="matkul-name">Technopreneur</td>
                                 <td class="text-center">3</td>
-                                <td class="text-center"><span class="badge-kelas">A0123</span></td>
+                                <td class="text-center"><span class="badge-kelas">A3000</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
                             </tr>
                             <tr>
+                                <td>IFPB6042</td>
+                                <td class="matkul-name">Etika Profesi</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">A1300</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK6092</td>
+                                <td class="matkul-name">Manajemen Strategis</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK6102</td>
+                                <td class="matkul-name">Teori Bahasa Outomata</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK6112</td>
+                                <td class="matkul-name">Studi Kelayakan Bisnis</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DKKB2082</td>
+                                <td class="matkul-name">Digital Imaging</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">A5081</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DKPK4022</td>
+                                <td class="matkul-name">Public Speaking and Presentation</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">A5085</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MNKK6212</td>
+                                <td class="matkul-name">Manajemen UMKM</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A5051</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MNKK6202</td>
+                                <td class="matkul-name">Capital Market</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">A0205</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKB6172</td>
+                                <td class="matkul-name">Pemrograman Framework</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A0132</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKB6312</td>
+                                <td class="matkul-name">Kerja Praktek</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">AKPIF</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK6082</td>
+                                <td class="matkul-name">Manajemen Proyek Perangkat Lunak</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A5201</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK6122</td>
+                                <td class="matkul-name">RPL Terapan</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A5025</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFPK5072</td>
+                                <td class="matkul-name">Bahasa Inggris TOEFL</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MNKK5192</td>
+                                <td class="matkul-name">Supply Chain Management</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">A0148</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK5032</td>
+                                <td class="matkul-name">Teknik Riset Operasional</td>
+                                <td class="text-center">2</td>
+                                <td class="text-center"><span class="badge-kelas">A7003</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK7262</td>
+                                <td class="matkul-name">Fuzzy Logic</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK7322</td>
+                                <td class="matkul-name">Machine Learning</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK7042</td>
+                                <td class="matkul-name">Incident Handling</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK7072</td>
+                                <td class="matkul-name">Risk Management</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>IFKK7112</td>
+                                <td class="matkul-name">Metode Numerik</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">-</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span></label>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <div class="accordion-title">
+                    <h4>Semester 8</h4>
+                    <span class="badge-sks">Tersedia: 9 SKS</span>
+                </div>
+                <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-body">
+                <div class="table-responsive">
+                    <table class="krs-table">
+                        <thead>
+                            <tr>
+                                <th class="col-kode">Kode</th>
+                                <th class="col-matkul">Mata Kuliah</th>
+                                <th class="col-sks text-center">SKS</th>
+                                <th class="col-kelas text-center">Kelas</th>
+                                <th class="col-pilih text-center">Pilih</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IFKK8272</td>
+                                <td class="matkul-name">Wawasan dan Aplikasi Teknologi</td>
+                                <td class="text-center">3</td>
+                                <td class="text-center"><span class="badge-kelas">A6666</span></td>
                                 <td class="text-center">
                                     <label class="custom-checkbox">
                                         <input type="checkbox">
                                         <span class="checkmark"></span>
                                     </label>
                                 </td>
-                                <td>IFKB4252</td>
-                                <td class="matkul-name">Grafika Komputer</td>
-                                <td class="text-center">3</td>
-                                <td class="text-center"><span class="badge-kelas">A0124</span></td>
+                            </tr>
+                            <tr>
+                                <td>IFKB8332</td>
+                                <td class="matkul-name">Skripsi</td>
+                                <td class="text-center">6</td>
+                                <td class="text-center"><span class="badge-kelas">ATAIF</span></td>
+                                <td class="text-center">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

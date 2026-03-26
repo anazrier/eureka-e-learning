@@ -588,3 +588,21 @@
         justify-content: space-between;
     }
 }
+
+/* Memastikan card profil tidak memotong elemen yang keluar dari kotaknya */
+.krs-info-card, 
+.student-info-row {
+    overflow: visible !important;
+}
+
+/* Memaksa menu dropdown tampil di lapisan paling atas */
+.info-group.dropdown-container .dropdown-menu {
+    z-index: 9999 !important;
+}
+
+/* Memastikan elemen di bawahnya mengalah */
+.krs-grid, 
+.accordion-grid {
+    position: relative;
+    z-index: 1;
+}
