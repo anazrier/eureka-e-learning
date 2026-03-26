@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isi Evadom - Eureka</title>
+    
+    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="./navbar/navbar.css">
+    <link rel="stylesheet" href="./content/eureka/sidebar/sidebar.css">
+    <link rel="stylesheet" href="./content/eureka/kuesioner/form-kuesioner.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <aside id="sidebar-container" class="sidebar-container"></aside>
+        <div class="main-wrapper">
+            <header id="navbar-container" class="navbar-container"></header>
+            
+            <main class="content-container">
+                <div class="dashboard-header">
+                    <a href="./kuesioner.html" class="btn-back"><i class="fas fa-arrow-left"></i> Kembali</a>
+                    <h2>Pengisian EVADOM</h2>
+                    <p class="dashboard-subtitle">Evaluasi Kinerja Dosen Mata Kuliah</p>
+                </div>
+
+                <div class="form-card">
+                    <div class="eval-info-box">
+                        <div class="info-row">
+                            <span class="info-label">Mata Kuliah</span>
+                            <strong class="info-value">Algoritma & Pemrograman 2 (IFKB2292)</strong>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Dosen Pengampu</span>
+                            <strong class="info-value">Nama Dosen Lengkap, S.Kom., M.T.</strong>
+                        </div>
+                    </div>
+
+                    <form action="./kuesioner.html" method="GET">
+                        <div class="table-responsive">
+                            <table class="kuesioner-table">
+                                <thead>
+                                    <tr>
+                                        <th class="col-no">No</th>
+                                        <th class="col-pertanyaan">Aspek Penilaian (Pedagogik & Profesional)</th>
+                                        <th class="col-skala text-center">1<br><span>Sangat Kurang</span></th>
+                                        <th class="col-skala text-center">2<br><span>Kurang</span></th>
+                                        <th class="col-skala text-center">3<br><span>Cukup</span></th>
+                                        <th class="col-skala text-center">4<br><span>Baik</span></th>
+                                        <th class="col-skala text-center">5<br><span>Sangat Baik</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td>Dosen menyampaikan rencana perkuliahan (RPS) dan kontrak kuliah dengan jelas di awal semester.</td>
+                                        <td class="text-center"><input type="radio" name="q1" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q1" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q1" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q1" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q1" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td>Dosen menguasai materi perkuliahan dengan baik dan mampu menjawab pertanyaan mahasiswa.</td>
+                                        <td class="text-center"><input type="radio" name="q2" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q2" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q2" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q2" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q2" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">3</td>
+                                        <td>Kemampuan dosen dalam menjelaskan materi secara sistematis dan mudah dipahami.</td>
+                                        <td class="text-center"><input type="radio" name="q3" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q3" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q3" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q3" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q3" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">4</td>
+                                        <td>Pemanfaatan media pembelajaran (PPT, Video, E-Learning) untuk membantu pemahaman.</td>
+                                        <td class="text-center"><input type="radio" name="q4" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q4" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q4" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q4" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q4" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">5</td>
+                                        <td>Kedisiplinan dosen dalam kehadiran dan ketepatan waktu memulai/mengakhiri perkuliahan.</td>
+                                        <td class="text-center"><input type="radio" name="q5" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q5" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q5" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q5" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q5" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">6</td>
+                                        <td>Dosen memberikan feedback atau masukan atas tugas dan ujian yang dikerjakan mahasiswa.</td>
+                                        <td class="text-center"><input type="radio" name="q6" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q6" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q6" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q6" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q6" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">7</td>
+                                        <td>Dosen bersikap objektif dan transparan dalam memberikan penilaian kepada mahasiswa.</td>
+                                        <td class="text-center"><input type="radio" name="q7" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q7" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q7" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q7" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q7" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">8</td>
+                                        <td>Ketersediaan waktu dosen untuk berkonsultasi di luar jam tatap muka kelas.</td>
+                                        <td class="text-center"><input type="radio" name="q8" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q8" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q8" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q8" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q8" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">9</td>
+                                        <td>Dosen mampu menciptakan suasana kelas yang interaktif dan memotivasi mahasiswa.</td>
+                                        <td class="text-center"><input type="radio" name="q9" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q9" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q9" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q9" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q9" value="5"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td>Kesesuaian materi yang diberikan dengan perkembangan ilmu pengetahuan terkini.</td>
+                                        <td class="text-center"><input type="radio" name="q10" value="1" required></td>
+                                        <td class="text-center"><input type="radio" name="q10" value="2"></td>
+                                        <td class="text-center"><input type="radio" name="q10" value="3"></td>
+                                        <td class="text-center"><input type="radio" name="q10" value="4"></td>
+                                        <td class="text-center"><input type="radio" name="q10" value="5"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <label for="kritik-saran">Kritik, Saran, atau Masukan Konstruktif:</label>
+                            <textarea id="kritik-saran" rows="4" class="form-control" placeholder="Tuliskan masukan Anda di sini..."></textarea>
+                        </div>
+
+                        <div class="form-actions text-right mt-4">
+                            <button type="button" class="btn-secondary" onclick="window.location.href='./kuesioner.html'">Batal</button>
+                            <button type="button" class="btn-primary" onclick="konfirmasiKirim()"><i class="fas fa-paper-plane"></i> Kirim Evaluasi</button>
+                        </div>
+
+                        <script>
+                        function konfirmasiKirim() {
+                            Swal.fire({
+                                title: 'Kirim Evaluasi?',
+                                text: "Pastikan semua penilaian sudah sesuai.",
+                                icon: 'question',
+                                showCancelButton: true,
+                                confirmButtonColor: '#58a4df',
+                                cancelButtonColor: '#f27a71',
+                                confirmButtonText: 'Ya, Kirim!',
+                                cancelButtonText: 'Cek Lagi'
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    Swal.fire({
+                                        title: 'Berhasil!',
+                                        text: 'Evaluasi dosen telah terkirim.',
+                                        icon: 'success',
+                                        confirmButtonColor: '#58a4df'
+                                    }).then(() => {
+                                        // Redirect kembali ke halaman kuesioner
+                                        window.location.href = './kuesioner.html';
+                                    });
+                                }
+                            })
+                        }
+                        </script>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script>
+        loadComponent('sidebar-container', 'content/eureka/sidebar/sidebar.html');
+        loadComponent('navbar-container', 'navbar/navbar.html');
+    </script>
+</body>
+</html>

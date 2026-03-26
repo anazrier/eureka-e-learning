@@ -183,16 +183,64 @@ function toggleAccordion(btn) {
     item.classList.toggle('active');
 }
 
-function switchPortofolioTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("portofolio-tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
+
+function switchKuesionerTab(evt, tabId) {
+    // Sembunyikan semua konten tab
+    var tabcontent = document.getElementsByClassName("krs-tab-content");
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
         tabcontent[i].classList.remove("active");
     }
-    tablinks = document.getElementsByClassName("portofolio-tab-btn");
-    for (i = 0; i < tablinks.length; i++) {
+
+    // Hapus efek aktif pada tombol
+    var tablinks = document.getElementsByClassName("krs-tab-btn");
+    for (var i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
-    document.getElementById(tabName).classList.add("active");
+
+    // Tampilkan tab yang dipilih
+    document.getElementById(tabId).style.display = "block";
+    
+    // Gunakan timeout kecil untuk transisi CSS opacity/transform jika ada
+    setTimeout(() => {
+        document.getElementById(tabId).classList.add("active");
+    }, 10);
+    
     evt.currentTarget.classList.add("active");
 }
+
+function simpanKRS() {
+    // Mengambil nilai SKS dari HTML agar pesannya lebih dinamis
+    const totalSKS = document.querySelector('.total-sks-value').innerText;
+
+    Swal.fire({
+        title: 'Simpan Rencana Studi?',
+        text: `Pastikan total ${totalSKS} yang kamu pilih sudah sesuai.`,
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#58a4df', // Warna biru soft
+        cancelButtonColor: '#f27a71', // Warna merah soft
+        confirmButtonText: 'Ya, Simpan!',
+        cancelButtonText: 'Cek Lagi'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            
+            // Logika simpan data ke database bisa ditaruh di sini nanti
+            
+            Swal.fire({
+                title: 'Berhasil!',
+                text: 'Rencana studi kamu telah tersimpan.',
+                icon: 'success',
+                confirmButtonColor: '#58a4df'
+            }).then(() => {
+                // Aksi setelah tombol OK pada pesan sukses diklik
+                // Silakan buka komentar di bawah ini jika ingin me-refresh halaman:
+                // window.location.reload();
+                
+                // Atau jika ingin pindah ke halaman lain:
+                // window.location.href = './halaman-lain.html';
+            });
+        }
+    });
+}
+
