@@ -506,37 +506,37 @@
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; margin-bottom: 15px;">
-                    <h3 class="form-section-title" style="margin: 0; padding: 0; border: none;">Sertifikasi / Kompetensi Tambahan</h3>
-                    <button type="button" class="btn-outline" style="margin: 0; padding: 8px 15px; font-size: 13px; display: flex; align-items: center; gap: 6px;">
+                <div class="section-title-with-btn">
+                    <h3 class="form-section-title certification-title">Sertifikasi / Kompetensi Tambahan</h3>
+                    <button type="button" class="btn-outline add-certification-btn">
                         <i class="fas fa-plus"></i> Tambah Sertifikat
                     </button>
                 </div>
 
                 <div class="table-responsive">
-                    <table class="modern-table">
+                    <table class="modern-table education-table">
                         <thead>
                             <tr>
-                                <th style="width: 5%;">No</th>
-                                <th style="width: 35%;">Nama Sertifikasi</th>
-                                <th style="width: 25%;">Lembaga Penerbit</th>
-                                <th style="width: 15%;">Tahun</th>
-                                <th style="width: 10%; text-align: center;">Berkas</th>
-                                <th style="width: 10%; text-align: center;">Aksi</th>
+                                <th class="col-no">No</th>
+                                <th class="col-nama">Nama Sertifikasi</th>
+                                <th class="col-lembaga">Lembaga Penerbit</th>
+                                <th class="col-tahun">Tahun</th>
+                                <th class="col-berkas text-center">Berkas</th>
+                                <th class="col-aksi text-center">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td style="font-weight: 600;">Sertifikasi LSP (Garuda Emas)</td>
+                                <td class="text-bold">Sertifikasi LSP (Garuda Emas)</td>
                                 <td>BNSP</td>
                                 <td>2024</td>
-                                <td style="text-align: center;">
-                                    <a href="#" style="color: #4a9bdc; text-decoration: none; font-size: 18px;" title="Lihat PDF">
+                                <td class="text-center">
+                                    <a href="#" class="pdf-link" title="Lihat PDF">
                                         <i class="fas fa-file-pdf"></i>
                                     </a>
                                 </td>
-                                <td style="text-align: center;">
+                                <td class="text-center">
                                     <button type="button" class="action-btn edit-btn" title="Edit Data"><i class="fas fa-edit"></i></button>
                                     <button type="button" class="action-btn delete-btn" title="Hapus Data" onclick="showEdutrackConfirm(
                                         'Hapus Sertifikat?', 
@@ -553,24 +553,14 @@
                     </table>
                 </div>
 
-                <div class="form-actions" style="margin-top: 30px;">
+                <div class="form-actions education-actions">
                     <button type="button" class="btn-primary" onclick="showEdutrackConfirm(
                         'Simpan Riwayat?', 
                         'Apakah kamu yakin data riwayat pendidikan yang diisi sudah benar?', 
                         'question', 
                         'Ya, Simpan', 
                         function() {
-                            Swal.fire({ 
-                                title: 'Tersimpan!', 
-                                text: 'Data riwayat berhasil diperbarui.', 
-                                icon: 'success', 
-                                customClass: { 
-                                    popup: 'eureka-swal-popup', 
-                                    title: 'eureka-swal-title', 
-                                    confirmButton: 'eureka-btn-confirm' 
-                                }, 
-                                buttonsStyling: false 
-                            });
+                            Swal.fire({ title: 'Tersimpan!', text: 'Data riwayat berhasil diperbarui.', icon: 'success', customClass: { popup: 'eureka-swal-popup', title: 'eureka-swal-title', confirmButton: 'eureka-btn-confirm' }, buttonsStyling: false });
                         }
                     )">Simpan Riwayat</button>
                 </div>
