@@ -1,0 +1,158 @@
+<div class="dashboard-header">
+    <h2>Kuesioner & Evaluasi</h2>
+    <p class="dashboard-subtitle">Bantu tingkatkan kualitas layanan dan pembelajaran melalui masukan Anda</p>
+</div>
+
+<div class="krs-tabs-container">
+    <button class="krs-tab-btn active" onclick="switchKuesionerTab(event, 'tab-evadom')">
+        <i class="fas fa-chalkboard-teacher"></i> EVADOM
+    </button>
+    <button class="krs-tab-btn" onclick="switchKuesionerTab(event, 'tab-kampus')">
+        <i class="fas fa-university"></i> Kuesioner Kampus
+    </button>
+</div>
+
+<div id="tab-evadom" class="krs-tab-content active" style="display: block;">
+    <div class="krs-card">
+        <div class="semester-header">
+            <h4 class="semester-title">Evaluasi Dosen Mata Kuliah</h4>
+            <span class="badge warning-bg">Semester Saat Ini</span>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="krs-table">
+                <thead>
+                    <tr>
+                        <th class="col-kode">Kode</th>
+                        <th class="col-matkul">Mata Kuliah</th>
+                        <th class="col-dosen">Dosen Pengampu</th>
+                        <th class="col-status text-center">Status</th>
+                        <th class="col-aksi text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IFKB2292</td>
+                        <td class="matkul-name">Algoritma dan Pemrograman 2</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge warning-bg">Belum Diisi</span></td>
+                        <td class="text-center">
+                            <a href="./form-evadom.html" class="btn-primary btn-sm" style="text-decoration:none; display:inline-block;">Isi Evaluasi</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IFKB2132</td>
+                        <td class="matkul-name">Pemrograman Desktop</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IFKK2022</td>
+                        <td class="matkul-name">Sistem Informasi</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IFKK2192</td>
+                        <td class="matkul-name">Arsitektur dan Organisasi Komputer</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UNKU0022</td>
+                        <td class="matkul-name">Pancasila</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IFKB2242</td>
+                        <td class="matkul-name">Pemrograman Web I</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UNKU0042</td>
+                        <td class="matkul-name">Character Building</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UNKU0052</td>
+                        <td class="matkul-name">Bahasa Inggris</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UNKU0062</td>
+                        <td class="matkul-name">Entrepreneurship</td>
+                        <td>Dosen Pengampu</td>
+                        <td class="text-center"><span class="badge success-bg">Selesai</span></td>
+                        <td class="text-center">
+                            <button class="btn-secondary btn-sm" disabled>Sudah Diisi</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="tab-kampus" class="krs-tab-content" style="display: none;">
+    <div class="kuesioner-grid">
+        
+        <div class="kuesioner-card">
+            <div class="kuesioner-icon primary-icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="kuesioner-info">
+                <h4>Evaluasi Fasilitas Kampus</h4>
+                <p>Penilaian terhadap kenyamanan ruang kelas, laboratorium, dan area publik.</p>
+                <div class="kuesioner-meta">
+                    <span class="deadline"><i class="far fa-clock"></i> Ditutup: 30 Mar 2026</span>
+                    <span class="badge warning-bg">Wajib</span>
+                </div>
+            </div>
+            <a href="./form-kampus.html" class="btn-primary" style="text-decoration:none; display:block; text-align:center;">
+                Mulai Isi
+            </a>
+        </div>
+
+        <div class="kuesioner-card">
+            <div class="kuesioner-icon success-icon">
+                <i class="fas fa-user-graduate"></i>
+            </div>
+            <div class="kuesioner-info">
+                <h4>Kepuasan Layanan Akademik</h4>
+                <p>Beri masukan tentang layanan administrasi, tata usaha, dan kemahasiswaan.</p>
+                <div class="kuesioner-meta">
+                    <span class="deadline"><i class="far fa-clock"></i> Ditutup: 15 Apr 2026</span>
+                    <span class="badge success-bg">Selesai</span>
+                </div>
+            </div>
+            <button class="btn-secondary" disabled>Sudah Diisi</button>
+        </div>
+
+    </div>
+</div>
+
