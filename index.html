@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Eureka LMS</title>
+    <title>Login - EDAN</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -29,14 +29,14 @@
 
                     <form action="index.html" onsubmit="prosesLogin(event)">
                         <div class="form-group position-relative mb-4">
-                            <input type="text" class="form-control" placeholder="Username / NIM">
+                            <input type="text" id="username" class="form-control" placeholder="Username / NIM">
                             <div class="form-control-icon">
                                 <i class="bi bi-person"></i>
                             </div>
                         </div>
 
                         <div class="form-group position-relative mb-4">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" id="password" class="form-control" placeholder="Password">
                             <div class="form-control-icon">
                                 <i class="bi bi-shield-lock"></i>
                             </div>
@@ -49,7 +49,7 @@
                             </label>
                         </div>
 
-                        <button class="btn btn-primary w-100">Log in</button>
+                        <button type="submit" class="btn btn-primary w-100">Log in</button>
                     </form>
                 </div>
             </div>
@@ -70,34 +70,65 @@
             const inputAkun = document.getElementById('username').value;
             const inputPassword = document.getElementById('password').value;
 
-            if (inputAkun === 'abcd1234' && inputPassword === '12345678') {
+            // 1. Validasi jika form masih kosong
+            if (!inputAkun || !inputPassword) {
                 Swal.fire({
-                    title: 'Login Berhasil!',
-                    text: 'Mengarahkan ke Dashboard Eureka...',
-                    icon: 'success',
-                    timer: 1500, 
-                    showConfirmButton: false,
-                    customClass: {
-                        popup: 'eureka-swal-popup',
-                        title: 'eureka-swal-title'
-                    }
-                }).then(() => {
-                    window.location.href = 'app.html'; 
+                    icon: 'warning',
+                    title: '<strong style="color: #333333;">Data Belum Lengkap</strong>',
+                    html: '<span style="color: #555555;">Silakan masukkan Username/NIM dan Password Anda.</span>',
+                    confirmButtonColor: '#58a4df',
+                    background: '#ffffff',
+                    color: '#333333'
                 });
-            } else {
-                Swal.fire({
-                    title: 'Login Gagal!',
-                    text: 'Akun atau Password yang kamu masukkan salah.',
-                    icon: 'error',
-                    confirmButtonText: 'Coba Lagi',
-                    confirmButtonColor: '#e74a3b',
-                    customClass: {
-                        popup: 'eureka-swal-popup',
-                        title: 'eureka-swal-title',
-                        confirmButton: 'eureka-btn-confirm'
-                    }
-                });
+                return;
             }
+
+            // 2. Animasi Loading (Memeriksa Kredensial)
+            let timerInterval;
+            Swal.fire({
+                title: '<strong style="color: #58a4df;">Memeriksa Akun...</strong>',
+                html: '<span style="color: #555555;">Mohon tunggu sebentar.</span>',
+                timer: 1500,
+                timerProgressBar: true,
+                allowOutsideClick: false,
+                background: '#ffffff',
+                color: '#58a4df',
+                didOpen: () => {
+                    Swal.showLoading();
+                },
+                willClose: () => {
+                    clearInterval(timerInterval);
+                }
+            }).then(() => {
+                
+                // 3. Pengecekan Kredensial Login
+                if (inputAkun === 'abcd1234' && inputPassword === '12345678') {
+                    // Jika Sukses
+                    Swal.fire({
+                        title: '<strong style="color: #333333;">Login Berhasil!</strong>',
+                        html: '<span style="color: #555555;">Mengarahkan ke Dashboard Eureka...</span>',
+                        icon: 'success',
+                        timer: 1500, 
+                        showConfirmButton: false,
+                        background: '#ffffff',
+                        color: '#333333'
+                    }).then(() => {
+                        window.location.href = 'index.html'; // Diubah ke index.html (Dashboard Utama)
+                    });
+                } else {
+                    // Jika Gagal (Warna tombol diubah ke coral soft khas Eureka)
+                    Swal.fire({
+                        title: '<strong style="color: #333333;">Login Gagal!</strong>',
+                        html: '<span style="color: #555555;">Username/NIM atau Password yang Anda masukkan salah.</span>',
+                        icon: 'error',
+                        confirmButtonText: 'Coba Lagi',
+                        confirmButtonColor: '#f27a71', 
+                        background: '#ffffff',
+                        color: '#333333'
+                    });
+                }
+                
+            });
         }
     </script>
 </body>
