@@ -1,0 +1,102 @@
+<div class="dashboard-header">
+    <h2>Sertifikasi & Portofolio</h2>
+    <p class="dashboard-subtitle">Kelola sertifikat TOEFL, poin SKKM, dan riwayat pengajuan surat</p>
+</div>
+
+<div class="portofolio-tabs-container">
+    <button class="portofolio-tab-btn active" onclick="switchPortofolioTab(event, 'tab-toefl')">
+        <i class="fas fa-language"></i> Sertifikasi TOEFL
+    </button>
+    <button class="portofolio-tab-btn" onclick="switchPortofolioTab(event, 'tab-skkm')">
+        <i class="fas fa-award"></i> Poin SKKM
+    </button>
+    <button class="portofolio-tab-btn" onclick="switchPortofolioTab(event, 'tab-surat')">
+        <i class="fas fa-envelope-open-text"></i> Surat Keluar
+    </button>
+</div>
+
+<div id="tab-toefl" class="portofolio-tab-content active">
+    
+    <div class="action-bar-container">
+        <div class="action-text">
+            <p>Riwayat tes TOEFL yang diakui oleh pihak kampus.</p>
+        </div>
+        <button class="btn-primary">
+            <i class="fas fa-plus"></i> Tambah Data TOEFL
+        </button>
+    </div>
+
+    <div class="portofolio-card">
+        <div class="table-responsive">
+            <table class="portofolio-table">
+                <thead>
+                    <tr>
+                        <th class="col-tgl">Tgl. Ujian</th>
+                        <th class="col-tempat">Tempat Ujian</th>
+                        <th class="col-nilai text-center">Nilai</th>
+                        <th class="col-status text-center">Status</th>
+                        <th class="col-aksi text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>15 Jan 2026</td>
+                        <td class="text-bold">Pusat Bahasa UNIBI</td>
+                        <td class="text-center text-bold text-blue">550</td>
+                        <td class="text-center">
+                            <span class="badge-status badge-success">Divalidasi</span>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn-action btn-view" title="Lihat Sertifikat"><i class="fas fa-file-pdf"></i> Lihat File</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10 Ags 2025</td>
+                        <td class="text-bold">Lembaga Bahasa LIA</td>
+                        <td class="text-center text-bold text-muted">480</td>
+                        <td class="text-center">
+                            <span class="badge-status badge-warning">Kadaluarsa</span>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn-action btn-view" title="Lihat Sertifikat"><i class="fas fa-file-pdf"></i> Lihat File</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="tab-skkm" class="portofolio-tab-content">
+    <div class="action-bar-container">
+        <div class="action-text">
+            <p>Satuan Kredit Kegiatan Mahasiswa (SKKM).</p>
+        </div>
+        <button class="btn-primary">
+            <i class="fas fa-plus"></i> Tambah Kegiatan
+        </button>
+    </div>
+    
+    <div class="portofolio-card empty-state-container">
+        <i class="fas fa-medal empty-icon"></i>
+        <h4>Belum Ada Data SKKM</h4>
+        <p>Kamu belum menginputkan sertifikat kegiatan kepanitiaan atau lomba.</p>
+    </div>
+</div>
+
+<div id="tab-surat" class="portofolio-tab-content">
+    <div class="action-bar-container">
+        <div class="action-text">
+            <p>Daftar riwayat pengajuan surat keterangan mahasiswa.</p>
+        </div>
+        <button class="btn-primary">
+            <i class="fas fa-plus"></i> Ajukan Surat Baru
+        </button>
+    </div>
+
+    <div class="portofolio-card empty-state-container">
+        <i class="fas fa-envelope-open empty-icon"></i>
+        <h4>Belum Ada Pengajuan Surat</h4>
+        <p>Riwayat surat keluar yang kamu ajukan akan tampil di sini.</p>
+    </div>
+</div>
