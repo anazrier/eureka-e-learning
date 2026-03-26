@@ -202,3 +202,61 @@ function simpanKRS() {
         }
     });
 }
+
+function tampilkanUbahSandi() {
+    Swal.fire({
+        title: 'Ubah Kata Sandi?',
+        // Kita gunakan html untuk memasukkan form input
+        html: `
+            <div style="text-align: left; margin-top: 10px;">
+                <label style="font-size: 0.9rem; font-weight: 600; color: #333; margin-bottom: 5px; display: block;">Kata Sandi Lama</label>
+                <input type="password" id="old-pass" class="swal2-input" placeholder="Masukkan kata sandi lama" style="margin: 0; width: 100%; box-sizing: border-box; font-size: 0.95rem;">
+            </div>
+            <div style="text-align: left; margin-top: 15px;">
+                <label style="font-size: 0.9rem; font-weight: 600; color: #333; margin-bottom: 5px; display: block;">Kata Sandi Baru</label>
+                <input type="password" id="new-pass" class="swal2-input" placeholder="Minimal 6 karakter" style="margin: 0; width: 100%; box-sizing: border-box; font-size: 0.95rem;">
+            </div>
+            <div style="text-align: left; margin-top: 15px; margin-bottom: 10px;">
+                <label style="font-size: 0.9rem; font-weight: 600; color: #333; margin-bottom: 5px; display: block;">Konfirmasi Kata Sandi Baru</label>
+                <input type="password" id="confirm-pass" class="swal2-input" placeholder="Ketik ulang kata sandi baru" style="margin: 0; width: 100%; box-sizing: border-box; font-size: 0.95rem;">
+            </div>
+        `,
+        icon: 'info', // Mengikuti style konfirmasiSimpan
+        showCancelButton: true,
+        confirmButtonColor: '#58a4df',
+        cancelButtonColor: '#f27a71',
+        confirmButtonText: 'Ya, Simpan',
+        cancelButtonText: 'Batal',
+        // preConfirm berfungsi mengecek input sebelum popup tertutup
+        preConfirm: () => {
+            const oldPass = document.getElementById('old-pass').value;
+            const newPass = document.getElementById('new-pass').value;
+            const confirmPass = document.getElementById('confirm-pass').value;
+
+            if (!oldPass || !newPass || !confirmPass) {
+                Swal.showValidationMessage('Semua kolom harus diisi!');
+                return false;
+            }
+            if (newPass.length < 6) {
+                Swal.showValidationMessage('Kata sandi baru minimal 6 karakter!');
+                return false;
+            }
+            if (newPass !== confirmPass) {
+                Swal.showValidationMessage('Konfirmasi kata sandi tidak cocok!');
+                return false;
+            }
+            return true;
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Popup sukses yang style-nya persis dengan konfirmasiSimpan
+            Swal.fire({
+                title: 'Tersimpan!',
+                text: 'Kata sandi Anda berhasil diperbarui.',
+                icon: 'success',
+                confirmButtonColor: '#58a4df'
+            });
+            // (Kamu bisa tambahkan kode untuk mengirim data ke database di sini nantinya)
+        }
+    })
+}
